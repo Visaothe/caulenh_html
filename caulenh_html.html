@@ -28,7 +28,8 @@
 
 <hr> <!-- Kẻ ngang dòng
 -------------------------------------------------------->
-03. <br>
+<b>03. LẤY FILE ẢNH + ẢNH TRÊN WEB KHÁC + LINK</b>
+<br>
 <!-- ẢNH -->
 <h2>Meet Mr. Bob</h2>
 <img src="http://bob.codegym.vn/assets/images/Codegym-bob-RIGHTxWH200.png"
@@ -71,15 +72,22 @@
 
 <form>
     <h4>Nhập tài khoản</h4>
-    <input type="text" name="firstname"> <br><br>
+    <input type="text" name="firstname"> <br>
     <h4>Nhập mật khẩu</h4>
 
-    <input type="password" name="NHẬP MẬT KHẩU"> <br><br>
+    <input type="password" name="NHẬP MẬT KHẩU"> <br>
     Chọn Ngày Tháng <br>
-
     <input type="date" name="Chọn ngày tháng"> <br> <br>
     <input type="submit">
     <input type="reset">
+</form>
+<br>------------------------
+<form>
+    Họ tên: <br>
+    <input type="Tài khoản" value="Visaothe">
+    <br> <br>
+    <input type="password" value="..........">
+    <input type="submit">
 </form>
 
 <hr>
@@ -92,6 +100,8 @@
  <tr> : Khai báo 1 dòng
  <th> : Khai báo 1 ô tiêu đề
  <td> : Khai báo 1 ô dữ liệu
+ Thẻ mở rộng đứng: colpan="2"
+ Thẻ mở rộng hàng: rowpan="2"
   -->
 <table border="1">
     <tr>
@@ -139,7 +149,16 @@
         <td></td>
     </tr>
 </table>
-
+<form action="/action_page.php">
+    <fieldset>
+        <legend>Personal information:</legend>
+        First name:<br>
+        <input type="text" name="firstname" value="Anh Thế"><br>
+        Last name:<br>
+        <input type="text" name="lastname" value="Nguyễn"><br><br>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
 <!--  -->
 <!--  -->
 <!--  -->
