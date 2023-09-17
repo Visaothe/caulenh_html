@@ -21,27 +21,66 @@
       color: white;
       background-color: blue;
       font-family: "Times New Roman";
-      font-size: 14px;
-      text-align: center;
+      font-size: 18px;
+      /*text-align: center;*/
     }
     #table-danhsach2{
       color:blue;
       font-size: 20px;
       font-family: "Times New Roman";
     }
+    /*-----------------------------------*/
+    .table2-form{
+      width: 500px;
+      margin: 0 auto;
+      /*background-color: chartreuse;*/
+      /*color: blue;*/
+      border: black 1px solid;
+      text-align: center;
+    }
+    #caption2_form{
+      font-size: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 50px
+    }
+    .table2-form tr td{
+      border: black 1px solid;
+    }
+    .div_dangnhap{
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    #div_summit_reset{
+      margin-left: 100px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+    #tr_dongmenu{
+      color: white;
+      background-color: chartreuse;
+      font-size: 20px;
+    }
+    #div_dangky{
+      text-align: right;
+      margin-right: 20px;
+    }
   </style>
 </head>
 <body>
+<!------------------------------------------->
 <table class="table-danhsach">
   <caption id="table-danhsach2">DANH SACH NHAN SU</caption>
   <tr id="menu-danhmuc">
     <th>STT</th>
-    <th>NGÀY THÁNG</th>
+    <th>
+      <a href="#">NGÀY THÁNG</a>
+    </th>
     <th>HỌ TÊN</th>
     <th>TỈNH</th>
     <th>MAIL</th>
   </tr>
-  <tr>
+  <tr id>
     <td>1</td>
     <td>15/09/2023</td>
     <td>Nguyễn Văn Thế </td>
@@ -70,9 +109,40 @@
     <td>cong@gmail.com</td>
   </tr>
 </table>
+<!-------------------------------------------->
+<table class="table2-form">
+  <caption id="caption2_form">bài tập làm form chọn</caption>
+  <tr id="tr_dongmenu">
+    <td>GHI CHÚ</td>
+    <td>NỘI DUNG</td>
+  </tr>
+  <tr>
+    <td> NHOM 1</td>
+    <td>
+      <p> ĐĂNG NHẬP TẢI KHOẢN </p>
+      <div class="div_dangnhap">
+        <label>Nhập tài khoản </label>
+        <input type="text">
+      </div>
+      <div>
+        <label>Nhập Passworl </label>
+        <input type="password">
+      </div>
+      <div id="div_summit_reset">
+        <input type="submit" value="Đăng Nhập">
+        <input type="reset" value="Nhập Lại">
+      </div>
+      <div id="div_dangky">
+        <label>
+          <a href="#">Đăng ký tại đây</a>
+        </label>
+      </div>
 
 
 
+    </td>
+  </tr>
+</table>
 
 
 </body>
