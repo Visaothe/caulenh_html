@@ -57,9 +57,10 @@
       margin-bottom: 10px;
     }
     #tr_dongmenu{
-      color: white;
+      color: black;
       background-color: chartreuse;
       font-size: 20px;
+      font-weight: bold;
     }
     #div_dangky{
       text-align: right;
@@ -68,6 +69,45 @@
     #div_namsinh{
       margin-top: 15px;
     }
+    /*---------------------------------------------*/
+    .table_exten{
+      border: black 1px solid;
+      margin: auto;
+      margin-top: 15px;
+      width: 1000px;
+      height: 150px;
+      text-align: center;
+    }
+    #exten1{
+      border: black 1px solid;
+      margin: auto;
+      width: 200px;
+      height: 400px;
+    }
+    #exten2{
+      border: black 1px solid;
+      margin: auto;
+      width: 400px;
+    }
+    #exten3{
+      border: black 1px solid;
+      margin: auto;
+      width: 400px;
+    }
+    #ex_tieude{
+      border: black 1px solid;
+      height: 50px;
+      text-align: left;
+      font-family: "Times New Roman";
+      font-size: 25px;
+      font-weight: bold;
+      background-color: darkcyan;
+      color: blue;
+      text-transform: uppercase;
+    }
+
+
+
   </style>
 </head>
 <body>
@@ -144,13 +184,24 @@
           <a href="#">Đăng ký tại đây</a>
         </label>
       </div>
-
-
-
     </td>
   </tr>
 </table>
+<!---------------------------------------------->
+<table class="table_exten">
+  <tr>
+    <td id="ex_tieude"> Công ty TNHH Công Nghệ Techcons</td>
+  </tr>
+  <tr>
+    <td>
+      <table>
+        <td id="exten1">1</td>
+        <td id="exten2">2</td>
+        <td id="exten3">3</td>
+      </table>
+    </td>
 
-
+  </tr>
+</table>
 </body>
 </html>
