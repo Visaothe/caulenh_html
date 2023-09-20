@@ -38,3 +38,4 @@ function  result() {
     var z = x + y;
     document.getElementById('message').innerHTML ="ketqua:" +z
 }
+
