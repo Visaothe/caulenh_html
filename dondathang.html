@@ -2,50 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DON DAT HANG</title>
+    <title>ĐƠN ĐẶT HÀNG</title>
     <style>
         .table_1{
             width: 100%;
             height: 100%;
             border-collapse:collapse;
             border: 1px solid black;
-            /*text-align: center;*/
         }
         .table_1 tr td{
             border: 1px solid black;
+            text-align: center;
+        }
+        #ip3{
+            width: 170px;
+        }
+        .dv1{
+            margin-top:10px;
         }
         #td1{
-            /*text-align: center;*/
+            width: auto;
+        }
+        #td4{
+            text-align: left;
         }
     </style>
 </head>
 <body>
 <table class="table_1">
-    <tr>
+    <tr id="tr1">
         <td id="td1">
-            <p> DON DAT HANG </p>
-          So luong  <input type="text" id="ip1">
-            <br>
-          San pham  <input type="text" id="ip2">
-            <br>
-            loai <select id="ip3">
-                <option value="1">Loai 1</option>
-                <option value="1">Loai 2</option>
-                <option value="1">Loai 3</option>
-                </select>
-            <br>
-            Don gia <input type="text" id="ip4">
-            <br>
-            Noi nhan hang <input type="checkbox" id="ip5">
-            Ngoai thanh <input type="radio" id="ip6">
-            <br>--------------------------------<br>
-            <button>Dat hang </button>
+            <p> ĐƠN ĐẶT HÀNG </p>
+            <div class="dv1">
+                <label>Số Lượng</label>  <input type="text" id="ip1">
+            </div>
+            <div class="dv1">
+                <label> Sản phẩm </label>  <input type="text" id="ip2">
+            </div>
 
+            <div class="dv1">
+                <label> Loại  </label>
+                <select id="ip3">
+                <option value="1">Loại 1</option>
+                <option value="1">Loại 2</option>
+                <option value="1">Loại 3</option>
+            </select>
+            </div>
+            <div class="dv1">
+                <label>Đơn Giá </label> <input type="text" id="ip4">
+            </div>
+            <div class="dv1">
+                <label>Nơi Nhận Hàng</label> <input type="checkbox" id="ip5">
+                <label>Ngoại Thành </label> <input type="radio" id="ip6">
+            </div>
+            --------------------------------<br>
+            <button>Đặt Hàng </button>
         </td>
-        <td>2</td>
+        <td>
+            <p> ĐƠN ĐẶT HÀNG </p>
+            <dv>
+                <label>Số Lượng</label>  <input type="text" id="ip1">
+            </dv>
+            <div>
+                <label> Sản phâm </label>  <input type="text" id="ip2">
+            </div>
+            <div>
+                <label> Loại  </label>
+                <select id="ip3">
+                    <option value="1">Loại 1</option>
+                    <option value="1">Loại 2</option>
+                    <option value="1">Loại 3</option>
+                </select>
+            </div>
+            <div>
+                <label>Đơn Giá </label> <input type="text" id="ip4">
+            </div>
+            <div>
+                <label>Nơi Nhận Hàng</label> <input type="checkbox" id="ip5">
+                <label>Ngoại Thành </label> <input type="radio" id="ip6">
+            </div>
+            --------------------------------<br>
+            <button>Đặt Hàng </button>
+        </td>
     </tr>
     <tr>
-        <td colspan="2">3</td>
+        <td colspan="2" id="td4" >
+            <p id="sl1">Số Lương: </p>
+            <p id="sp">sản phẩm: </p>
+            <p id="l1">Loại: </p>
+            <p id="dg">Đơn Giá: </p>
+        </td>
     </tr>
 </table>
 
