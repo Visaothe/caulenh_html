@@ -24,7 +24,7 @@
 <!-- GẮN LINK LIÊN KẾT -->
 <a href="nguonchinhchu.vn">NGUONCHINHCHU </a>
 <p> Thẻ này dùng để gắn link các trang hoặc index với nhau </p>
-<pre> dùng viết 1 đoạn văn trong code ko thay đổi </pre>
+<pre> dùng viết 1 đoạn văn trong code ko thay đổi hàm pre </pre>
 
 <hr> <!-- Kẻ ngang dòng
 -------------------------------------------------------->
@@ -162,10 +162,72 @@
         <input type="submit" value="Submit">
     </fieldset>
 </form>
-<!--  -->
-<!--  -->
-<!--  -->
-<!--  -->
+<!-- -------------------------------------------------- -->
+<b>8. TỔNG QUAN JAVASCRIPT</b>
+<p> - các câu lệnh cần dùng javascript có 3 cách: </p>
+ cách 1: tạo đuôi .js để riêng
+<!--<p>  <script src="myScript.js"></script> </p> -->
+<br>
+ cách 2: Nhúng trực tiếp ở html. VD dưới: làm thay đổi nội dung:
+<p id="demo">Nguyễn Văn A</p>
+<button type="button" onclick="myFunction()">Click thay đổi </button>
+<script>
+function myFunction() {
+   document.getElementById("demo").innerHTML = "Trần Thị Thuy";
+}
+</script>
+<br>-------------------<br>
+ cách 3: Viết thẻ script ngay bên trong HTML
+<br>--------------------
+<div>
+<button onclick="alert('xin chào the')"<>Click vào đây </button>  => Hiện trạng thái alert
+</div>
+
+<p>JavaScript có thể thay đổi thuộc tính thẻ HTML</p>
+<button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">Turn on the light</button>
+<img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:100px">
+<button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">Turn off the light</button>
+<br>-----------------------------------------------------------------------
+<h4> Bài tập 1 : Hiển thị thông báo Alert </h4>
+<button type="button" onclick="showMessage();">Click 1!</button>
+<script>
+    function showMessage(){
+        alert('Xin chào!');
+    }
+</script>
+
+<h4> Bài tập 2 : Hiển thị kết quả sử dụng thẻ HTML: </h4>
+<div id="messageDiv"></div>
+<button type="button" onclick="showMessage();">Click 2!</button>
+<script>
+    function showMessage(){
+        document.getElementById('messageDiv').innerHTML = 'Xin chào!';
+    }
+</script>
+
+<h4> Bài tập 3 : Hiển thị kết quả sử dụng hàm document.write(): Chuyển trang </h4>
+<button type="button" onclick="showMessage();">Click 3!</button>
+<script>
+    function showMessage(){
+        document.write('Xin chào!');
+    }
+</script>
+
+<h4> Bài tập 4 : Hiển thị kết quả sử dụng hàm console.log():: </h4>
+<p> bật màn hình console hoặc F12 để xem kết quả</p>
+<button type="button" onclick="showMessage();">Click 4!</button>
+<script>
+    function showMessage(){
+        console.log('Xin chào!');
+    }
+</script>
+
+
+
+
+
+
+
 
 <br>
 <br>
