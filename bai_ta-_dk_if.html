@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap</title>
+</head>
+<body>
+<table >
+    <tr>
+            <td> Nhap so a:</td>
+            <td>chon phep tinh:</td>
+            <td>chon so b:</td>
+            <td> </td>
+    </tr>
+    <tr>
+        <td>
+            <input id="a" type="number" name="so1">
+        </td>
+        <td>
+            <select id="operator">
+                <option> Chon phep tinh </option>
+                <option value="+"> Cong </option>
+                <option value="-"> Tru </option>
+                <option value="*"> Nhan </option>
+                <option value="/"> Chia </option>
+            </select>
+        </td>
+        <td>
+            <input id="b" type="number" name="so2">
+        </td>
+        <td>
+            <button id="btn" onclick="caculator()"> Kiem tra </button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4"><p id="kq">ke qua phep tinh: </p></td>
+    </tr>
+</table>
+<table style="border:black 1px solid">
+    <tr>
+        <td style="width: 400px; ">DANG NHAP</td>
+        <td rowspan="5" style="width: 1000px;border:black 1px solid; ">
+            <h3> BAI TAP THUC HANH</h3>
+            <p>bai 1: nhap a so a v b. a co chia het cho b khong </p>
+            <input type="number" id="a1">
+            <input type="number" id="a2">
+            <input onclick="tk01()" type="submit" value="Tim Kiem" id="a3">
+            <p id="a4"> =>></p>
+            <p>Bai 2: Nhap tuoi du dk vao lop 10 </p>
+            <input type="number" id="hs1">
+            <input onclick="hs001()" type="button" value="Kiem tra tuoi hs">
+            <p id="hs2">=>>:</p>
+            <!---------------->
+            <p>Bai 3: Nhap so kiem tra co phai so nguyen ko </p>
+            <input type="number" id="nguyen1">
+            <input type="submit" onclick="nguyen1()">
+            <p id="nguyen2">=>>:</p>
+
+        </td>
+    </tr>
+    <tr>
+        <td><input type="text" id="user"></td>
+    </tr>
+    <tr>
+        <td><input type="password" id="pass"></td>
+    </tr>
+    <tr>
+        <td><input onclick="submit1()" type="submit" value="Login"></td>
+    </tr>
+    <tr>
+        <td>
+            <p id="kq2"> Hien ket qua: </p>
+        </td>
+    </tr>
+</table>
+<script>
+function tk01(){
+    let a = document.getElementById("a1").value;
+    let b = document.getElementById("a2").value;
+    let c = a % b;
+    if(c == 0){
+        document.getElementById("a4").innerHTML+=a+" chia het cho"+b;
+    }else{
+        document.getElementById("a4").innerHTML+="a khong chia het cho b"
+    }
+}
+function hs001(){
+    let a = document.getElementById("hs1").value;
+    if(a < 14){
+        document.getElementById("hs2").innerHTML+="khong du tuoi vao lop 10";
+    }else{
+        document.getElementById("hs2").innerHTML+="du tuoi vao lop 10";
+    }
+}
+function nguyen1(){
+    let a = document.getElementById("nguyen1").value;
+    let b = a % 1;
+    if(b != 0){
+        document.getElementById("nguyen2").innerHTML+="So khong phai la so nguyen";
+    }else{
+        document.getElementById("nguyen2").innerHTML+="So vua nhap la so nguyen";
+    }
+    if (b>0){
+        document.getElementById("nguyen2").innerHTML+="<0";
+    }else {
+        document.getElementById("nguyen2").innerHTML+=">0";
+    }
+}
+function submit1() {
+    let a =document.getElementById("user").value;
+    let b =document.getElementById("pass").value;
+    if (a==='' || b===''){
+        document.getElementById("kq2").innerHTML+="ban phai nhap tai khoan va mat khau: ";
+    }else{
+        document.getElementById("kq2").innerHTML+="tai khoan ban da nhap dung:" +a +b;
+    }
+    if (a=="null" || b==="null"){
+        document.getElementById("kq2").innerHTML+="tai khoan khong ton tai";
+    }else{
+        document.getElementById("kq2").innerHTML+="tai khoan hoac mat khau khong dung";
+    }
+
+}
+
+
+
+
+function caculator() {
+    let a = +document.getElementById("a").value;
+    let b = +document.getElementById("b").value;
+    let operator = document.getElementById("operator").value;
+    let result;
+    switch (operator) {
+        case "+":
+            result = a + b;
+            break;
+        case "-":
+            result = a - b;
+            break
+        case "*":
+            result = a * b;
+            break;
+        case "/":
+            result = a / b;
+    }
+document.getElementById('kq').innerHTML = result;
+}
+
+ /*       let scoremath = +prompt('Toan');
+        let scorephysic = +prompt('Ly');
+        let scorechemist = +prompt('hoa');
+if(scoremath <0 || scorephysic < 0 || scorechemist < 0 ||scorephysic > 10 || scoremath > 10 || scorechemist > 10){
+    alert('Diem nhap vao khong hop le');
+}else{
+    let avg=(scoremath + scorephysic + scorechemist)/3
+    if (avg >= 8){
+        alert('Loai gioi');
+    }else if (avg<=5){
+        alert('Trung Binh');
+    }else {
+        alert('kha');
+    }
+}
+*/
+
+</script>
+</body>
+</html>
